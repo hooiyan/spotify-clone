@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-none {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+  }
+}
+
+:root {
+  /* COLOR */
+  --green: #1db954;
+  --black: #000000;
+  --light-black: #121212;
+  --card-black: #151515;
+  --white: #ffffff;
+  --dark-grey: #282828;
+  --dropdown-grey: #3e3e3e;
+  --grey: #b3b3b3;
+}
+
+/*
+/* Reference: https://www.digitalocean.com/community/tutorials/css-scrollbars */
+
+/* /* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey) var(--dark-grey);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 20px;
+  border: 3px solid #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%; /* This is needed for the full-screen background in LoginPage to work fine */
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.6rem;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Sora', sans-serif;
+}
+
+/* [aria-current='page'] {
+  color: var(--red);
+} */
+
+.activeLink {
+  @apply text-white bg-spotifyDarkGrey;
+}
+
+.downloadActiveLink {
+  @apply text-white bg-spotifyDarkGrey rounded-md;
+}
+
+.textOverflow {
+  @apply overflow-hidden overflow-ellipsis whitespace-nowrap;
+}
