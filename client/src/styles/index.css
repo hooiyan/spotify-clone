@@ -89,5 +89,5 @@ button {
 }
 
 .textOverflow {
-  @apply overflow-hidden overflow-ellipsis whitespace-nowrap;
+  @apply overflow-hidden text-ellipsis whitespace-nowrap;
 }
